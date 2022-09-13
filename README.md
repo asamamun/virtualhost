@@ -28,3 +28,6 @@ DocumentRoot "C:/xampp8/htdocs/"
 </VirtualHost>
 </pre>
  </code>
+ 
+ <hr>
+ <p>NOw you can visit localhost, myapp.test and quizapp.test links in browser</p>
