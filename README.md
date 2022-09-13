@@ -1,9 +1,12 @@
 # virtualhost
  <h3>Host file path : C:\Windows\System32\drivers\etc\hosts</h3>
 <code>
+ <pre>
 127.0.0.1   localhost
 127.0.0.1   myapp.test
 127.0.0.1   quizapp.test
+</pre>
+ </code>
 
 <h3>httpd-vhosts.conf file path : C:\xampp8\apache\conf\extra\httpd-vhosts.conf</h3>
 
