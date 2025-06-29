@@ -3,8 +3,8 @@
 <code>
  <pre>
 127.0.0.1   localhost
-127.0.0.1   myapp.test
-127.0.0.1   quizapp.test
+127.0.0.1   server.test
+127.0.0.1   socialapp.test
 </pre>
  </code>
 
@@ -13,21 +13,42 @@
 <code>
  <pre>
 <VirtualHost *:80>
-ServerName localhost
-DocumentRoot "C:/xampp8/htdocs/"
+    ServerName localhost
+    DocumentRoot "D:/xampp8240/htdocs/"
+    <Directory "D:/xampp8240/htdocs/">
+        AllowOverride All
+        Require all granted
+    </Directory>
 </VirtualHost>
 
+# server.dev
 <VirtualHost *:80>
-    ServerName myapp.test
-    ServerAlias myapp.local
-    DocumentRoot "C:/xampp8/htdocs/r49/react/snactum/test-app/public"
+    ServerName server.test    
+    DocumentRoot "D:/xampp8240/htdocs/ROUND64/"
+    <Directory "D:/xampp8240/htdocs/ROUND64/">
+        AllowOverride All
+        Require all granted
+    </Directory>
 </VirtualHost>
+
+# socialapp.test
 <VirtualHost *:80>
-    ServerName quizapp.test
-    DocumentRoot "C:/xampp8/htdocs/r49/laravel/projects/TigerQuiz/public"
+    ServerName socialapp.test
+    DocumentRoot "D:/xampp8240/htdocs/ROUND64/PHP/social-talk/"
+    <Directory "D:/xampp8240/htdocs/ROUND64/PHP/social-talk/">
+        AllowOverride All
+        Require all granted
+    </Directory>
 </VirtualHost>
 </pre>
  </code>
- 
  <hr>
- <p>NOw you can visit localhost, myapp.test and quizapp.test links in browser</p>
+ <h3>Uncomment in httpd.conf</h3>
+ <code>
+  <pre>
+   # Virtual hosts
+   Include conf/extra/httpd-vhosts.conf
+  </pre>
+ </code>
+ <hr>
+ <p>Now you can visit localhost, server.test and socialapp.test links in browser</p>
